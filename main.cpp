@@ -2,6 +2,8 @@
 #include "World.h"
 #include "Player.h"
 #include "Goblin.h"
+#include "Slime.h"
+#include "Wildboar.h"
 
 using namespace std;
 
@@ -13,6 +15,8 @@ using namespace std;
 int main()
 {
 	FGoblin Goblin;
+	FSlime Slime;
+	FWildboar wildboar;
 
 	//Goblin.Move();
 
