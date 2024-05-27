@@ -1,26 +1,18 @@
 #pragma once
-class FGoblin
+
+#include "Monster.h"
+
+//금형
+// 
+//협업한다.
+//휴먼에러를 줄인다.
+//encapsulation
+class FGoblin : public FMonster
 {
 public:
 	FGoblin();
 	~FGoblin();
 
-	//interface
-	void Move();
-	void Attack();
-	void Pickup();
 	void Jump();
-
-	//accessor
-	int GetGold();
-	//mutator
-	void SetGold(int NewGold);
-
-
-private:
-	int HP;
-	int Gold;
-
-	void Die();
 };
 

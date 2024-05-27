@@ -1,38 +1,21 @@
 #include "Goblin.h"
 
+#include <iostream>
+
+using namespace std;
+
 FGoblin::FGoblin()
 {
+	cout << "FGoblin Constructor" << endl;
 }
 
 FGoblin::~FGoblin()
 {
+	cout << "FGoblin Destructor" << endl;
+
 }
 
-void FGoblin::Move()
-{
-}
-
-void FGoblin::Attack()
-{
-}
-
-void FGoblin::Pickup()
-{
-}
 
 void FGoblin::Jump()
-{
-}
-
-int FGoblin::GetGold()
-{
-	return 0;
-}
-
-void FGoblin::SetGold(int NewGold)
-{
-}
-
-void FGoblin::Die()
 {
 }
