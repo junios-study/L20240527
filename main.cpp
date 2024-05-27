@@ -1,44 +1,32 @@
 #include <iostream>
-#include "World.h"
-#include "Player.h"
-#include "Goblin.h"
-#include "Slime.h"
-#include "Wildboar.h"
-
-#include <vector>//TArray
+#include <vector> 
 
 using namespace std;
 
-
-//»ó¼Ó
-//Ä¸½¶È­
-//´ÙÇü¼º(Ãß»ó), pointer
+#include "Triangle.h"
+#include "Rectangle.h"
+#include "Circle.h"
 
 int main()
 {
-	FPlayer Player;
-	vector<FMonster*> Monsters;
-	Monsters.push_back(new FSlime);
-	Monsters.push_back(new FSlime);
-	Monsters.push_back(new FWildboar);
-	Monsters.push_back(new FGoblin);
+	vector<FShape*> Shapes;
 
-	for (int i = 0; i < Monsters.size(); ++i)
+	Shapes.push_back(new FTriangle());
+	Shapes.push_back(new FRectangle());
+	Shapes.push_back(new FCircle());
+	//Shapes.push_back(new FShape());
+
+	for (int i = 0; i < Shapes.size(); ++i)
 	{
-		Monsters[i]->Move();
+		Shapes[i]->Draw();
 	}
 
-	for (int i = 0; i < Monsters.size(); ++i)
+	for (int i = 0; i < Shapes.size(); ++i)
 	{
-		delete Monsters[i];
+		delete Shapes[i];
 	}
 
-	//FMonster* Monster = new FSlime();
-
-	//Monster->Move();
-
-	//delete Monster;
-
+	Shapes.clear();
 
 	return 0;
 }
