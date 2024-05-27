@@ -11,8 +11,10 @@ class FGoblin : public FMonster
 {
 public:
 	FGoblin();
-	~FGoblin();
+	virtual ~FGoblin();
 
 	void Jump();
+
+	virtual void Move() override;
 };
 

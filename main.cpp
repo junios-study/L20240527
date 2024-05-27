@@ -10,51 +10,34 @@
 using namespace std;
 
 
+//»ó¼Ó
+//Ä¸½¶È­
+//´ÙÇü¼º(Ãß»ó), pointer
+
 int main()
 {
-	srand(time(0));
 	FPlayer Player;
-	int GoblinCount = rand() % 3 + 1;
-	vector<FGoblin*> Goblins;
+	vector<FMonster*> Monsters;
+	Monsters.push_back(new FSlime);
+	Monsters.push_back(new FSlime);
+	Monsters.push_back(new FWildboar);
+	Monsters.push_back(new FGoblin);
 
-	for (int i = 0; i < GoblinCount; ++i)
+	for (int i = 0; i < Monsters.size(); ++i)
 	{
-		Goblins.push_back(new FGoblin);
-		Goblins[i]->SetGold(100 + i);
+		Monsters[i]->Move();
 	}
 
-	for (int i = 0; i < GoblinCount; ++i)
+	for (int i = 0; i < Monsters.size(); ++i)
 	{
-		cout << Goblins[i]->GetGold() << endl;
+		delete Monsters[i];
 	}
 
-	for (int i = 0; i < GoblinCount; ++i)
-	{
-		delete Goblins[i];
-	}
+	//FMonster* Monster = new FSlime();
 
-	Goblins.clear();
+	//Monster->Move();
 
-	int SlimeCount = rand() % 3 + 1;
-	vector<FSlime*> Slimes;
-
-	for (int i = 0; i < SlimeCount; ++i)
-	{
-		Slimes.push_back(new FSlime);
-		Slimes[i]->SetGold(100 + i);
-	}
-
-	for (int i = 0; i < SlimeCount; ++i)
-	{
-		cout << Slimes[i]->GetGold() << endl;
-	}
-
-	for (int i = 0; i < SlimeCount; ++i)
-	{
-		delete Slimes[i];
-	}
-
-	Slimes.clear();
+	//delete Monster;
 
 
 	return 0;

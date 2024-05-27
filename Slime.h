@@ -7,5 +7,7 @@ public:
 	FSlime();
 	~FSlime();
 	void Slide();
+
+	virtual void Move() override;
 };
 

@@ -19,3 +19,10 @@ FGoblin::~FGoblin()
 void FGoblin::Jump()
 {
 }
+
+void FGoblin::Move()
+{
+	cout << "Goblin ";
+
+	FMonster::Move();
+}

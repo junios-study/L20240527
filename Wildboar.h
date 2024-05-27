@@ -5,7 +5,7 @@ class FWildboar : public FMonster
 {
 public:
 	FWildboar();
-	~FWildboar();
+	virtual ~FWildboar();
 	void Run();
 };
 

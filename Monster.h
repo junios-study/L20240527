@@ -3,9 +3,9 @@ class FMonster
 {
 public:
 	FMonster();
-	~FMonster();
+	virtual ~FMonster();
 
-	void Move();
+	virtual void Move(); //virtual function table
 	void Attack();
 	void Pickup();
 	int GetGold();
