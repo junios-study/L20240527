@@ -2,7 +2,7 @@
 class FWorld
 {
 public:
-	FWorld(); //생성자
+	FWorld(); //기본 생성자
 	~FWorld(); //소멸자
 };
 
