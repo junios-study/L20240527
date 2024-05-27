@@ -19,6 +19,7 @@ FMonster::~FMonster()
 
 void FMonster::Move()
 {
+	cout << "몬스터 이동" << endl;
 }
 
 void FMonster::Attack()
@@ -31,11 +32,15 @@ void FMonster::Pickup()
 
 int FMonster::GetGold()
 {
-	return 0;
+	return Gold;
 }
 
 void FMonster::SetGold(int NewGold)
 {
+	if (NewGold >= 0)
+	{
+		Gold = NewGold;
+	}
 }
 
 void FMonster::Die()

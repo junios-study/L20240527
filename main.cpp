@@ -5,20 +5,57 @@
 #include "Slime.h"
 #include "Wildboar.h"
 
+#include <vector>//TArray
+
 using namespace std;
 
-//				»ó¼Ó				¿ÜºÎ »ç¿ë(Ä¸½¶È­)
-//public		O					O
-//protected		O					X
-//private		X					X		
 
 int main()
 {
-	FGoblin Goblin;
-	FSlime Slime;
-	FWildboar wildboar;
+	srand(time(0));
+	FPlayer Player;
+	int GoblinCount = rand() % 3 + 1;
+	vector<FGoblin*> Goblins;
 
-	//Goblin.Move();
+	for (int i = 0; i < GoblinCount; ++i)
+	{
+		Goblins.push_back(new FGoblin);
+		Goblins[i]->SetGold(100 + i);
+	}
+
+	for (int i = 0; i < GoblinCount; ++i)
+	{
+		cout << Goblins[i]->GetGold() << endl;
+	}
+
+	for (int i = 0; i < GoblinCount; ++i)
+	{
+		delete Goblins[i];
+	}
+
+	Goblins.clear();
+
+	int SlimeCount = rand() % 3 + 1;
+	vector<FSlime*> Slimes;
+
+	for (int i = 0; i < SlimeCount; ++i)
+	{
+		Slimes.push_back(new FSlime);
+		Slimes[i]->SetGold(100 + i);
+	}
+
+	for (int i = 0; i < SlimeCount; ++i)
+	{
+		cout << Slimes[i]->GetGold() << endl;
+	}
+
+	for (int i = 0; i < SlimeCount; ++i)
+	{
+		delete Slimes[i];
+	}
+
+	Slimes.clear();
+
 
 	return 0;
 }
